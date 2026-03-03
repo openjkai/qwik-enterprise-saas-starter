@@ -1,0 +1,12 @@
+{
+  "name": "qwik-enterprise-saas-starter",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write .",
+    "setup:git": "git config commit.template .gitmessage"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2"
+  },
+  "packageManager": "pnpm@9.14.2"
+}
