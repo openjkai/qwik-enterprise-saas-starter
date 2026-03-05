@@ -11,10 +11,13 @@ pnpm setup:git   # Optional: use conventional commit template (feat:, chore:, et
 
 ## Docker
 
-Start Postgres + Redis:
+Start all services (Postgres, Redis, API, Web):
 
 ```bash
 docker compose up -d
 ```
+
+- API: http://localhost:3000
+- Web: http://localhost:5173
 
 See [ROADMAP.md](./ROADMAP.md) for step-by-step development plan.

@@ -15,5 +15,28 @@ services:
     ports:
       - "6379:6379"
 
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgresql://saas:saas_secret@postgres:5432/saas_db
+      JWT_SECRET: dev-secret-change-in-production
+    depends_on:
+      - postgres
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    ports:
+      - "5173:5173"
+    environment:
+      VITE_API_URL: http://localhost:3000
+    depends_on:
+      - api
+
 volumes:
   postgres_data:
