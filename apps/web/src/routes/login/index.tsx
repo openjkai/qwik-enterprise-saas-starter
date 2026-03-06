@@ -1,12 +1,7 @@
 import { component$ } from "@builder.io/qwik";
-import {
-  Form,
-  routeAction$,
-  zod$,
-  z,
-  type DocumentHead,
-} from "@builder.io/qwik-city";
+import { Form, routeAction$, zod$, type DocumentHead } from "@builder.io/qwik-city";
 import { api } from "~/lib/api";
+import { loginSchema } from "@qwik-enterprise-saas/shared";
 
 export const useLoginAction = routeAction$(
   async (data, { redirect, cookie }) => {
@@ -25,10 +20,7 @@ export const useLoginAction = routeAction$(
     });
     throw redirect(302, "/dashboard");
   },
-  zod$({
-    email: z.string().email(),
-    password: z.string().min(6),
-  }),
+  zod$(loginSchema),
 );
 
 export default component$(() => {
