@@ -13,24 +13,17 @@ export default component$(() => {
         </div>
         <ul>
           <li>
+            <a href="/login">Sign in</a>
+          </li>
+          <li>
+            <a href="/register">Sign up</a>
+          </li>
+          <li>
+            <a href="/dashboard">Dashboard</a>
+          </li>
+          <li>
             <a href="https://qwik.dev/docs/core/overview/" target="_blank">
               Docs
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://qwik.dev/examples/introduction/hello-world/"
-              target="_blank"
-            >
-              Examples
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://qwik.dev/tutorial/welcome/overview/"
-              target="_blank"
-            >
-              Tutorials
             </a>
           </li>
         </ul>
