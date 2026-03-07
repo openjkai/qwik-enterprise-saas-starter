@@ -2,6 +2,10 @@
   "name": "qwik-enterprise-saas-starter",
   "private": true,
   "scripts": {
+    "build": "pnpm run build:shared && pnpm run --filter api build && pnpm run --filter web build",
+    "build:shared": "pnpm run --filter @qwik-enterprise-saas/shared build",
+    "dev:api": "pnpm run --filter api start:dev",
+    "dev:web": "pnpm run --filter web dev",
     "format": "prettier --write .",
     "setup:git": "git config commit.template .gitmessage"
   },
