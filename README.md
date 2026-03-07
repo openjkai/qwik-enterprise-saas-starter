@@ -19,5 +19,3 @@ docker compose up -d
 
 - API: http://localhost:3000
 - Web: http://localhost:5173
-
-See [ROADMAP.md](./ROADMAP.md) for step-by-step development plan.
